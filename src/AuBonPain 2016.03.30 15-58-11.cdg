@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AuBonPain">
+  <ClassDiagramComponents>
+    <Class name="Coffee" package="AuBonPain" visibility="public" xPosition="643.0" yPosition="311.0">
+      <Fields>
+        <Field name="type" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Inventory" package="AuBonPain" visibility="public" xPosition="912.0" yPosition="58.0">
+      <Fields>
+        <Field name="count" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Sandwich" package="AuBonPain" visibility="public" xPosition="874.0" yPosition="330.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Soup" package="AuBonPain" visibility="public" xPosition="1080.0" yPosition="330.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ClassProject" package="ClassProject" visibility="public" xPosition="1414.0" yPosition="58.0">
+      <Fields>
+        <Field name="mainController" type="MainController" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MainController" package="Controllers" visibility="public" xPosition="1389.0" yPosition="379.0">
+      <Fields>
+        <Field name="professors" type="ArrayList&lt;Professor&gt;" visibility="private"/>
+        <Field name="advisers" type="ArrayList&lt;Adviser&gt;" visibility="private"/>
+        <Field name="undergrads" type="ArrayList&lt;Undergraduate&gt;" visibility="private"/>
+        <Field name="graduates" type="ArrayList&lt;Graduate&gt;" visibility="private"/>
+        <Field name="employees" type="ArrayList&lt;Employee&gt;" visibility="private"/>
+        <Field name="managers" type="ArrayList&lt;Manager&gt;" visibility="private"/>
+        <Field name="lounges" type="ArrayList&lt;Lounge&gt;" visibility="private"/>
+        <Field name="advisingOffices" type="ArrayList&lt;AdvisingOffice&gt;" visibility="private"/>
+        <Field name="elevators" type="ArrayList&lt;Elevator&gt;" visibility="private"/>
+        <Field name="classrooms" type="ArrayList&lt;Classroom&gt;" visibility="private"/>
+        <Field name="restrooms" type="ArrayList&lt;Restroom&gt;" visibility="private"/>
+        <Field name="auBonPain" type="AuBonPain" visibility="private"/>
+        <Field name="coffees" type="ArrayList&lt;Coffee&gt;" visibility="private"/>
+        <Field name="sandwiches" type="ArrayList&lt;Sandwich&gt;" visibility="private"/>
+        <Field name="soup" type="ArrayList&lt;Soup&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AdvisingOffice" package="Location" visibility="public" xPosition="414.0" yPosition="946.0">
+      <Fields>
+        <Field name="courseList" type="ArrayList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Student" name="student"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCourseList" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AuBonPain" package="Location" visibility="public" xPosition="922.0" yPosition="602.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Classroom" package="Location" visibility="public" xPosition="687.0" yPosition="690.0">
+      <Fields>
+        <Field name="isInSession" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIsInSession" returnType="boolean" visibility="public"/>
+        <Method name="sitDown" returnType="void" visibility="public"/>
+        <Method name="useComputer" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Elevator" package="Location" visibility="public" xPosition="34.0" yPosition="958.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="makeRequest" returnType="void" visibility="public"/>
+        <Method name="goUp" returnType="void" visibility="public"/>
+        <Method name="goDown" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Facility" package="Location" visibility="public" xPosition="314.0" yPosition="745.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ISTLocation" package="Location" visibility="public" xPosition="314.0" yPosition="432.0">
+      <Fields>
+        <Field name="maxOccupancy" type="int" visibility="private"/>
+        <Field name="isFull" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getMaxOccupancy" returnType="int" visibility="public"/>
+        <Method name="setMaxOccupancy" returnType="int" visibility="public">
+          <Argument type="int" name="value"/>
+        </Method>
+        <Method name="enterLocation" returnType="void" visibility="public"/>
+        <Method name="exitLocation" returnType="void" visibility="public"/>
+        <Method name="checkOccupancy" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Lounge" package="Location" visibility="public" xPosition="218.0" yPosition="920.0">
+      <Fields>
+        <Field name="numPillows" type="int" visibility="private"/>
+        <Field name="numChairs" type="int" visibility="private"/>
+        <Field name="numTables" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="sleep" returnType="void" visibility="public"/>
+        <Method name="doHomework" returnType="void" visibility="public"/>
+        <Method name="surfWeb" returnType="void" visibility="public"/>
+        <Method name="eatFood" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Restroom" package="Location" visibility="public" xPosition="643.0" yPosition="977.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="washHands" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Adviser" package="Person" visibility="public" xPosition="801.0" yPosition="1628.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="AuBonPainEmployee" package="Person" visibility="public" xPosition="2026.0" yPosition="1335.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Employee" package="Person" visibility="public" xPosition="1805.0" yPosition="1558.0">
+      <Fields>
+        <Field name="writeUpCount" type="int" visibility="private"/>
+        <Field name="isWorking" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="clean" returnType="void" visibility="public"/>
+        <Method name="stock" returnType="Inventory" visibility="public">
+          <Argument type="Inventory" name="inventory"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Graduate" package="Person" visibility="public" xPosition="1070.0" yPosition="1643.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="gradePaper" returnType="void" visibility="public"/>
+        <Method name="doResearch" returnType="void" visibility="public"/>
+        <Method name="teachClass" returnType="Classroom" visibility="public">
+          <Argument type="Classroom" name="classroom"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="Person" visibility="public" xPosition="2115.0" yPosition="1568.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="fireEmployee" returnType="Employee" visibility="public">
+          <Argument type="Employee" name="employee"/>
+        </Method>
+        <Method name="writeUpEmployee" returnType="Employee" visibility="public">
+          <Argument type="Employee" name="employee"/>
+        </Method>
+        <Method name="takeInventory" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="Person" visibility="public" xPosition="1323.0" yPosition="1049.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="gender" type="String" visibility="private"/>
+        <Field name="height" type="int" visibility="private"/>
+        <Field name="weight" type="int" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="moveToLocation" returnType="void" visibility="public"/>
+        <Method name="startConversation" returnType="Person" visibility="public">
+          <Argument type="Person" name="person"/>
+        </Method>
+        <Method name="grabFood" returnType="Sandwich" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Professor" package="Person" visibility="public" xPosition="558.0" yPosition="1618.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Student" package="Person" visibility="public" xPosition="1364.0" yPosition="1432.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Undergraduate" package="Person" visibility="public" xPosition="1419.0" yPosition="1652.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="goToClass" returnType="Classroom" visibility="public">
+          <Argument type="Classroom" name="classroom"/>
+        </Method>
+        <Method name="eatLunch" returnType="ArrayList&lt;Inventory&gt;" visibility="public">
+          <Argument type="ArrayList&lt;Inventory&gt;" name="lunch"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CreateCharacter" package="Views" visibility="public" xPosition="2266.0" yPosition="365.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="GameFrame" package="Views" visibility="public" xPosition="2078.0" yPosition="457.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="IntroPanel" package="Views" visibility="public" xPosition="1894.0" yPosition="355.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ViewGame" package="Views" visibility="public" xPosition="2078.0" yPosition="288.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="PSUEmployee" package="" visibility="public" xPosition="702.0" yPosition="1455.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="AuBonPain.Soup" target="AuBonPain.Inventory"/>
+    <IsRelation name="is" source="Location.Restroom" target="Location.Facility"/>
+    <IsRelation name="is" source="Location.AdvisingOffice" target="Location.Facility"/>
+    <IsRelation name="is" source="Person.Graduate" target="Person.Student"/>
+    <HasRelation name="ISTLocation" source="Controllers.MainController" target="Location.ISTLocation" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <IsRelation name="is" source="Person.Professor" target="Person.PSUEmployee"/>
+    <IsRelation name="is" source="Person.AuBonPainEmployee" target="Person.Person"/>
+    <IsRelation name="is" source="Location.AuBonPain" target="Location.ISTLocation"/>
+    <HasRelation name="Inventory" source="Controllers.MainController" target="AuBonPain.Inventory" type="Default" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <IsRelation name="is" source="AuBonPain.Coffee" target="AuBonPain.Inventory"/>
+    <IsRelation name="is" source="Location.Elevator" target="Location.Facility"/>
+    <IsRelation name="is" source="PSUEmployee" target="Person.Person"/>
+    <IsRelation name="is" source="Location.Lounge" target="Location.Facility"/>
+    <HasRelation name="mainController" source="ClassProject.ClassProject" target="Controllers.MainController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Person.Employee" target="Person.AuBonPainEmployee"/>
+    <IsRelation name="is" source="Location.Facility" target="Location.ISTLocation"/>
+    <IsRelation name="is" source="Person.Undergraduate" target="Person.Student"/>
+    <IsRelation name="is" source="Person.Adviser" target="Person.PSUEmployee"/>
+    <IsRelation name="is" source="Person.Student" target="Person.Person"/>
+    <IsRelation name="is" source="Location.Classroom" target="Location.ISTLocation"/>
+    <UseRelation source="Person.Manager" target="Person.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Person.Manager" target="Person.AuBonPainEmployee"/>
+    <HasRelation name="has" source="Controllers.MainController" target="Views.GameFrame" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Person" source="Controllers.MainController" target="Person.Person" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <IsRelation name="is" source="AuBonPain.Sandwich" target="AuBonPain.Inventory"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
